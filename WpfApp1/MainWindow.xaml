@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="app" Margin="0,134,0,0">
-        <Frame x:Name="Frmmain3" Content="Frame"/>
+        <Frame x:Name="Frmmain3" Content="Frame" Margin="0,-89,0,89"/>
 
     </Grid>
 </Window>
