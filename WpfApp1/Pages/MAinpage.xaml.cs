@@ -48,14 +48,20 @@ namespace WpfApp1.Pages
                         case 1:
                             MessageBox.Show("Здравствуйте, Администратор " + userObj.name + "!",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Produkts ffsfff = new Produkts();
+                            NavigationService.Navigate(ffsfff);
                             break;
                         case 2:
                             MessageBox.Show("Здравствуйте, Менеджер " + userObj.name + "!",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Produkts ffsf = new Produkts();
+                            NavigationService.Navigate(ffsf);
                             break;
                         case 3:
                             MessageBox.Show("Здравствуйте, пользователь " + userObj.name + "!",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                             Produkts ffsff = new Produkts();
+                            NavigationService.Navigate(ffsff);
                             break;
                         default:
                             MessageBox.Show("Данные не обнаружены!", "Уведомление",

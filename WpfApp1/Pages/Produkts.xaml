@@ -13,13 +13,13 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <Image Source="{Binding CurrentPhoto}" Grid.Column="0"/>
+            
             <RowDefinition Height="32"/>
             <RowDefinition Height="90"/>
             <RowDefinition Height="58"/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="listprodukts" Grid.Row="1" ScrollViewer.CanContentScroll="False">
+        <ListView x:Name="listprodukts" Grid.Row="1" ScrollViewer.CanContentScroll="False" Margin="0,45,0,13" Grid.RowSpan="2" Background="#FFFDFDFD" Height="206">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -33,29 +33,24 @@
 
                         <StackPanel Grid.Column="1" Width="Auto" Orientation="Vertical" HorizontalAlignment="Left">
                             <TextBlock Width="Auto" TextWrapping="Wrap" Height="Auto">
-                                <Run Text="000: "/>
+                                <Run Text="Категория "/>
                                 <Run Text="{Binding id_catekoria}"/>
                             </TextBlock>
                             <TextBlock Width="Auto" TextWrapping="Wrap" Height="Auto">
-                                <Run Text="Nype: "/>
+                                <Run Text="Цена"/>
                                 <Run Text="{Binding discount}"/>
                             </TextBlock>
                             <TextBlock Width="Auto" TextWrapping="Wrap" Height="Auto">
-                                <Run Text="Creumanshorts "/>
+                                <Run Text="Количество "/>
                                 <Run Text="{Binding quantity}"/>
                             </TextBlock>
                             <TextBlock Width="Auto" TextWrapping="Wrap" Height="Auto">
-                                <Run Text="Nype: "/>
+                                <Run Text="Описание "/>
                                 <Run Text="{Binding discription}"/>
                             </TextBlock>
                         </StackPanel>
 
-                        <StackPanel Grid.Column="2" Width="Auto" Orientation="Vertical" HorizontalAlignment="Left">
-                            <TextBlock Width="Auto" TextWrapping="Wrap" Height="Auto">
-                                <Run Text="Non "/>
-                                <Run Text="{Binding Gender}"/>
-                            </TextBlock>
-                        </StackPanel>
+                       
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

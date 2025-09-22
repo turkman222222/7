@@ -15,6 +15,8 @@ namespace WpfApp1.ApplicationData
     
     public partial class Entities3 : DbContext
     {
+        private string image;
+
         public Entities3()
             : base("name=Entities3")
         {
@@ -33,5 +35,6 @@ namespace WpfApp1.ApplicationData
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<users> users { get; set; }
         public virtual DbSet<Лист3_> Лист3_ { get; set; }
+        
     }
 }

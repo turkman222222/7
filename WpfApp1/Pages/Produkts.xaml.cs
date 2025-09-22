@@ -24,7 +24,7 @@ namespace WpfApp1.Pages
         public Produkts()
         {
             InitializeComponent();
-            List<s
+            List<Лист3_> prod = AppConnect.model1.Лист3_.ToList();
         }
     }
 }
