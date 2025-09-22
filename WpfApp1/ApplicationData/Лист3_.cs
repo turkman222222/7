@@ -20,5 +20,20 @@ namespace WpfApp1.ApplicationData
         public Nullable<int> quantity { get; set; }
         public string discription { get; set; }
         public string image { get; set; }
+        public string CurrentPhoto
+{
+    get
+    {
+        if (String.IsNullOrEmpty(image) || String.IsNullOrWhiteSpace(image))
+        {
+            return "/Images/picture.png";
+        }
+        else
+        {
+            return "/Images/" + image;
+        }
+    }
+}
+        
     }
 }
