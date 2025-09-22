@@ -24,7 +24,18 @@ namespace WpfApp1.Pages
         public Produkts()
         {
             InitializeComponent();
-            List<Лист3_> prod = AppConnect.model1.Лист3_.ToList();
+            List<Лист3_> products = AppConnect.model1.Лист3_.ToList();
+
+            listprodukts.ItemsSource = products;
+
+            if (products.Count > 0)
+            {
+                tbCounter.Text = "Найдено " + products.Count + " товаров";
+            }
+            else
+            {
+                tbCounter.Text = "Не найдено";
+            }
         }
     }
 }
