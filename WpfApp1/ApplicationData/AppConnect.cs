@@ -8,7 +8,7 @@ namespace WpfApp1.ApplicationData
 {
     internal class AppConnect
     {
-        public static Entities3 model1;
+        public static Entities4 model1;
 
     }
 }

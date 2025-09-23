@@ -11,7 +11,7 @@ namespace WpfApp1.ApplicationData
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Лист3_
     {
         public int id { get; set; }
@@ -20,20 +20,22 @@ namespace WpfApp1.ApplicationData
         public Nullable<int> quantity { get; set; }
         public string discription { get; set; }
         public string image { get; set; }
+
+        public virtual kategory kategory { get; set; }
         public string CurrentPhoto
-{
-    get
-    {
-        if (String.IsNullOrEmpty(image) || String.IsNullOrWhiteSpace(image))
         {
-            return "/images/picture.png";
+            get
+            {
+                if (String.IsNullOrEmpty(image) || String.IsNullOrWhiteSpace(image))
+                {
+                    return "/images/paper_2.jpeg";
+                }
+                else
+                {
+                    return "/images/" + image;
+                }
+            }
         }
-        else
-        {
-            return "/images/" + image;
-        }
-    }
-}
-        
+
     }
 }

@@ -130,6 +130,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Лист3$_kategory">
+          <End Role="kategory" Type="Self.kategory" Multiplicity="0..1" />
+          <End Role="Лист3$" Type="Self.Лист3$" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Лист3$">
+              <PropertyRef Name="id_catekoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище ModelContainer">
           <EntitySet Name="kategory" EntityType="Self.kategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="path" EntityType="Self.path" Schema="dbo" store:Type="Tables" />
@@ -155,6 +167,10 @@
             <End Role="role" EntitySet="role" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
+          <AssociationSet Name="FK_Лист3$_kategory" Association="Self.FK_Лист3$_kategory">
+            <End Role="kategory" EntitySet="kategory" />
+            <End Role="Лист3$" EntitySet="Лист3$" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -167,6 +183,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Лист3_" Relationship="Self.FK_Лист3__kategory" FromRole="kategory" ToRole="Лист3_" />
         </EntityType>
         <EntityType Name="path">
           <Key>
@@ -245,7 +262,20 @@
           <Property Name="quantity" Type="Int32" />
           <Property Name="discription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="kategory" Relationship="Self.FK_Лист3__kategory" FromRole="Лист3_" ToRole="kategory" />
         </EntityType>
+        <Association Name="FK_Лист3__kategory">
+          <End Role="kategory" Type="Self.kategory" Multiplicity="0..1" />
+          <End Role="Лист3_" Type="Self.Лист3_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Лист3_">
+              <PropertyRef Name="id_catekoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_path_point">
           <End Role="point" Type="Self.point" Multiplicity="1" />
           <End Role="path" Type="Self.path" Multiplicity="*" />
@@ -294,7 +324,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="kategory" EntityType="Self.kategory" />
           <EntitySet Name="path" EntityType="Self.path" />
           <EntitySet Name="point" EntityType="Self.point" />
@@ -303,6 +333,10 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="users" EntityType="Self.users" />
           <EntitySet Name="Лист3_" EntityType="Self.Лист3_" />
+          <AssociationSet Name="FK_Лист3__kategory" Association="Self.FK_Лист3__kategory">
+            <End Role="kategory" EntitySet="kategory" />
+            <End Role="Лист3_" EntitySet="Лист3_" />
+          </AssociationSet>
           <AssociationSet Name="FK_path_point" Association="Self.FK_path_point">
             <End Role="point" EntitySet="point" />
             <End Role="path" EntitySet="path" />
@@ -325,7 +359,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities3">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities4">
           <EntitySetMapping Name="kategory">
             <EntityTypeMapping TypeName="Model.kategory">
               <MappingFragment StoreEntitySet="kategory">

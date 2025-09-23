@@ -174,6 +174,37 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\paper_0.jpeg" />
+    <Resource Include="Images\paper_1.jpeg" />
+    <Resource Include="Images\paper_10.jpeg" />
+    <Resource Include="Images\paper_11.jpeg" />
+    <Resource Include="Images\paper_12.jpeg" />
+    <Resource Include="Images\paper_13.jpeg" />
+    <Resource Include="Images\paper_14.jpeg" />
+    <Resource Include="Images\paper_15.jpeg" />
+    <Resource Include="Images\paper_16.jpeg" />
+    <Resource Include="Images\paper_17.jpeg" />
+    <Resource Include="Images\paper_18.jpeg" />
+    <Resource Include="Images\paper_19.jpeg" />
+    <Resource Include="Images\paper_2.jpeg" />
+    <Resource Include="Images\paper_20.jpeg" />
+    <Resource Include="Images\paper_21.jpeg" />
+    <Resource Include="Images\paper_22.jpeg" />
+    <Resource Include="Images\paper_23.jpeg" />
+    <Resource Include="Images\paper_24.jpeg" />
+    <Resource Include="Images\paper_25.jpeg" />
+    <Resource Include="Images\paper_3.jpeg" />
+    <Resource Include="Images\paper_4.jpeg" />
+    <Resource Include="Images\paper_5.jpeg" />
+    <Resource Include="Images\paper_6.jpeg" />
+    <Resource Include="Images\paper_7.jpeg" />
+    <Resource Include="Images\paper_8.jpeg" />
+    <Resource Include="Images\paper_9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ApplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -184,10 +215,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="image\" />
-    <Folder Include="Pages\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
